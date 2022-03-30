@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.example.navfragmentasynctask.InputFragment"
+        android:label="fragment_input"
+        tools:layout="@layout/fragment_input" >
+        <action
+            android:id="@+id/action_inputFragment_to_resFragment2"
+            app:destination="@id/resFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/resFragment2"
+        android:name="com.example.navfragmentasynctask.ResFragment"
+        android:label="fragment_res"
+        tools:layout="@layout/fragment_res" >
+        <argument
+            android:name="num"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="maxNum"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

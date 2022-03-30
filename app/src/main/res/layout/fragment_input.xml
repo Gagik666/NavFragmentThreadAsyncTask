@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    android:padding="50dp"
+    tools:context=".InputFragment">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="edNumber, edMaxNumber, cvButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="initial quantity:"
+        android:inputType="number"
+        android:textColorHint="#C3C2C2"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/flowContainer"
+        app:layout_constraintEnd_toEndOf="@id/flowContainer"
+        app:layout_constraintTop_toTopOf="@id/flowContainer"
+        app:layout_constraintBottom_toTopOf="@id/edMaxNumber"/>
+
+
+    <EditText
+        android:id="@+id/edMaxNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="maximum quantity:"
+        android:backgroundTint="@color/white"
+        android:textColorHint="#C3C2C2"
+        android:inputType="number"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/flowContainer"
+        app:layout_constraintEnd_toEndOf="@id/flowContainer"
+        app:layout_constraintTop_toBottomOf="@id/edNumber"
+        app:layout_constraintBottom_toTopOf="@id/cvButton"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#6A3D1B"
+        android:elevation="8dp"
+        app:cardCornerRadius="200dp"
+        app:strokeColor="#AEF6EBE4"
+        app:strokeWidth="3dp"
+        app:layout_constraintStart_toStartOf="@id/flowContainer"
+        app:layout_constraintEnd_toEndOf="@id/flowContainer"
+        app:layout_constraintTop_toBottomOf="@id/edMaxNumber"
+        app:layout_constraintBottom_toBottomOf="@id/flowContainer">
+
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:clickable="false"
+            android:autoSizeTextType="uniform"
+            android:text="S t a r t"
+            android:textStyle="bold"
+            android:backgroundTint="#6A3D1B" />
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
